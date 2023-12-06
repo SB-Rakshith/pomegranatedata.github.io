@@ -56,35 +56,6 @@
       background-color: #0D47A1; /* Darker blue color on hover */
     }
 
-    /* Additional CSS Styles */
-    .starry-sky {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      pointer-events: none;
-    }
-
-    .star {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      background-color: #fff;
-      animation: twinkling 2s infinite;
-    }
-
-    @keyframes twinkling {
-      0%, 100% {
-        opacity: 0;
-      }
-      50% {
-        opacity: 1;
-      }
-    }
-
-
     footer {
       background-color: #000;
       color: #aaa;
@@ -113,27 +84,5 @@
     <p>&copy; 2023 AgriTecX. All rights reserved.</p>
   </footer>
 
-  <script>
-    // JavaScript for creating starry sky
-    const createStars = () => {
-      const stars = document.createElement('div');
-      stars.className = 'starry-sky';
-
-      for (let i = 0; i < 100; i++) {
-        const star = document.createElement('div');
-        star.className = 'star';
-        const xy = Math.random() * 100;
-        const duration = Math.random() * 10;
-        star.style.left = `${xy}vw`;
-        star.style.top = `${xy}vh`;
-        star.style.animationDuration = `${duration}s`;
-        stars.appendChild(star);
-      }
-
-      document.body.appendChild(stars);
-    };
-
-    createStars();
-  </script>
 </body>
 </html>
